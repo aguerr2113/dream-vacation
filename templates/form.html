@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="flex-container">
+    <div id="floater" class="floater">
+        <!--  -->
+    </div>
+    <div class="container">
+        <h1>Welcome to Our Site</h1>
+        <p>This is the home page.</p>
+        <form action="/vacation" class="container-2">
+          
+          {% for prompt in prompts %}
+          <div class="row">
+            <div class="col-25">
+              <label for="{{ prompt }}">{{ prompt }}</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="{{ prompt }}" name="{{ prompt }}" placeholder="Your {{ prompt }}..">
+            </div>
+          </div>
+          {% endfor %}
+    
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+

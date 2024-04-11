@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Answer Page{% endblock %}
+
+{% block content %}
+<div class="flex-container">
+    <div id="floater" class="floater">
+        <p>{{ text }}</p>
+    </div>
+    <div class="container">
+        <h1>WOW</h1>
+        <h1>Your DREAM Vacation!</h1>
+        <p>KING OF THE CASTLE!</p>
+        <form action="/" method="get"> <!-- Modify the action attribute as needed -->
+          <div class="row">
+            <input class="home" type="submit" value="Again?">
+          </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
